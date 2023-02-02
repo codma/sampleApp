@@ -33,7 +33,3 @@ func (User) Fields() []ent.Field {
 func (User) Edges() []ent.Edge {
 	return nil
 }
-
-//사용자아이디로 구매내역을 쌓음
-//createday로 구매일을 확인
-//주기계산은 사용자 별 카테고리별 심바 - 사료 / 심바 - 간식
