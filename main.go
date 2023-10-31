@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"main/api"
 	"main/common/setting"
 	"main/constant"
@@ -24,6 +25,7 @@ func init() {
 		panic(err)
 	}
 
+	fmt.Println("Hello!")
 }
 
 func main() {
