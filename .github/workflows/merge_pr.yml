@@ -11,6 +11,7 @@ jobs:
   delete_branch:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v3
         - name: Debug Info
           run: |
             pwd
@@ -18,7 +19,5 @@ jobs:
         - name: delete branch
           if: github.event.pull_request.merged == true
           run: |
-            cd $GITHUB_WORKSPACE
-            git checkout ${{ github.event.pull_request.base.ref }}
             git branch -d ${{ github.event.pull_request.head.ref }}
             git push origin --delete ${{ github.event.pull_request.head.ref }}
