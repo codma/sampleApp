@@ -14,6 +14,6 @@ jobs:
         - name: delete branch
           if: github.event.pull_request.merged == true
           run: |
-          git checkout ${{ github.event.pull_request.base.ref }}
-          git branch -d ${{ github.event.pull_request.head.ref }}
-          git push origin --delete ${{ github.event.pull_request.head.ref }}
+            git checkout ${{ github.event.pull_request.base.ref }}
+            git branch -d ${{ github.event.pull_request.head.ref }}
+            git push origin --delete ${{ github.event.pull_request.head.ref }}
