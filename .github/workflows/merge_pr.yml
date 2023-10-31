@@ -11,6 +11,10 @@ jobs:
   delete_branch:
       runs-on: ubuntu-latest
       steps:
+        - name: Debug Info
+          run: |
+            pwd
+            ls -la $GITHUB_WORKSPACE
         - name: delete branch
           if: github.event.pull_request.merged == true
           run: |
